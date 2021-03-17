@@ -1,10 +1,10 @@
-const crypto = require("crypto");
+const uuid = require("uuid");
 
 module.exports = () => (req, res, next) => {
-  const id = crypto.randomBytes(16).toString("hex");
+  const id = uuid.v4();
 
-  req.headers["x-request-id"] = id;
-  res.set("x-request-id", id);
+  req.headers["X-Request-Id"] = id;
+  res.setHeader("X-Request-Id", id);
   req.id = id;
 
   next();

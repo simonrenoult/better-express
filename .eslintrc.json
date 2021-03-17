@@ -1,9 +1,0 @@
-{
-  "extends": ["prettier"],
-  "env": {
-    "node": true
-  },
-  "parserOptions": {
-    "ecmaVersion": 2021
-  }
-}
